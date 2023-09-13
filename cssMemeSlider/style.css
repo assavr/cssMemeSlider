@@ -11,45 +11,225 @@ body {
   padding: 1%;
   width: 60vw;
   height: 55vh;
-  background-color: #ddd;
+  background-color: #aaa;
   display: flex;
   flex-direction: column;
 }
 
 .wrapper__top {
   display: flex;
-  height: 90%;
+  height: 75%;
+  width: 500%;
 }
+
+input {
+  width: 0;
+}
+
+.block__item {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* add transition */
+}
+
+.item {
+  height: 100%;
+}
+
 
 .wrapper__bottom {
   display: flex;
-  align-items: center;
+  flex-grow: 1;
+  align-items: flex-end;
   justify-content: space-between;
 }
 
-.block__label {
-display: flex;
-}
 
+.block__text {
+  height: 2em;
 
-
-label {
-  cursor: pointer;
-}
-
-
-
-
-
-
-.block__item:nth-child(1) {
-  margin-left: 20%;  
-}
-
-.images {
   overflow: hidden;
-  display: flex;
 }
-.block__input {
+
+.text {
+  display: inline-block;
+  width: 3em;
+  margin-right: 51em;
+  line-height: 2em;
+  /* display: flex;
+  align-items: center;
+    justify-content: center; */
+}
+
+
+.block__label {
+  display: flex;
+  gap: 0.5em;
+}
+
+.block-btn {
+  border-radius: 100%;
+  cursor: pointer;
+  padding: 0.8em;
+  opacity: 0.4;
+  /* background-color: gray; */
+  /* add transition */
+}
+
+.block-btn:hover {
+  opacity: 1;
+}
+
+.block-btn:active .btn {
+  background-color: black;
+}
+
+#images-1:checked+.btn-1 {
+  background-color: black;
+}
+
+#images-2:checked+.btn-1 {
+  background-color: black;
+}
+
+.btn {
+  height: 1em;
+  width: 1em;
+  border-radius: 100%;
+  background-color: pink;
+}
+
+
+/* 
+#images-1:checked~.item-1 {
+  margin-left: 0%;
+  
+}
+
+
+#images-2:checked~.item-1 {
+  margin-left: -20%;
+  
+}
+
+#images-3:checked~.item-1 {
+  margin-left: -40%;
+}
+
+#images-4:checked~.item-1 {
+  margin-left: -60%;
+}
+
+#images-5:checked~.item-1 {
+  margin-left: -80%;
+} */
+
+
+
+/* slide img */
+.wrapper:has(#images-1:checked) .item-1 {
+  margin-left: 0;
+}
+
+.wrapper:has(#images-2:checked) .item-1 {
+  margin-left: -20%;
+}
+
+.wrapper:has(#images-3:checked) .item-1 {
+  margin-left: -40%;
+}
+
+.wrapper:has(#images-4:checked) .item-1 {
+  margin-left: -60%;
+}
+
+.wrapper:has(#images-5:checked) .item-1 {
+  margin-left: -80%;
+}
+
+
+/* active state btn */
+.wrapper:has(#images-1:checked) .btn-1 {
+  background-color: red;
+  opacity: 1;
+}
+
+.wrapper:has(#images-2:checked) .btn-2 {
+  background-color: red;
+  opacity: 1;
+}
+
+.wrapper:has(#images-3:checked) .btn-3 {
+  background-color: red;
+  opacity: 1;
+}
+
+.wrapper:has(#images-4:checked) .btn-4 {
+  background-color: red;
+  opacity: 1;
+}
+
+.wrapper:has(#images-5:checked) .btn-5 {
+  background-color: red;
+  opacity: 1;
+}
+
+
+/* move text */
+
+/* 1 text */
+
+
+
+
+/* 2 text */
+.wrapper:has(#images-2:checked) .text-1 {
   display: none;
+}
+
+/* .wrapper:has(#images-2:checked) .text-2 {
+    opacity: 1;
+   }
+  .text-2 {
+    opacity: 0;
+    transition: 1s;
+  } */
+
+/* 3 text */
+.wrapper:has(#images-3:checked) .text-1,
+.wrapper:has(#images-3:checked) .text-2 {
+  display: none;
+}
+
+/* 4 text */
+.wrapper:has(#images-4:checked) .text-1,
+.wrapper:has(#images-4:checked) .text-2,
+.wrapper:has(#images-4:checked) .text-3 {
+  display: none;
+}
+
+/* 5 text */
+.wrapper:has(#images-5:checked) .text-1,
+.wrapper:has(#images-5:checked) .text-2,
+.wrapper:has(#images-5:checked) .text-3,
+.wrapper:has(#images-5:checked) .text-4 {
+  display: none;
+}
+
+
+/* начала делать сердечки вместо кружков
+ */
+svg {
+  fill: green
+}
+.wrapper:has(#images-1:checked) [data-heart = "one"] {
+  fill: green;
+  opacity: 1;
+}
+
+.wrapper:has(#images-1:checked) .btn-11 {
+  
+  opacity: 1;
 }
