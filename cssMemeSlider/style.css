@@ -15,7 +15,7 @@ path {
   margin: 0 auto;
   padding: 1%;
   width: 55vw;
-    height: 36vh;
+  height: 55vh;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -42,7 +42,6 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* add transition */
 }
 
 .item {
@@ -144,30 +143,77 @@ input {
 
 /* 1 text */
 
+.wrapper:has(#images-1:checked) .text-1 {
+  transform: translate(0%);
+  transition: 1s;
+}
 
 /* 2 text */
 .wrapper:has(#images-2:checked) .text-1 {
-  display: none;
+  transform: translate(-100%);
+  transition: 1s;
+}
+.wrapper:has(#images-2:checked) .text-2 {
+  transform:translateY(-100%);;
+  transition: 1s;
 }
 
 /* 3 text */
-.wrapper:has(#images-3:checked) .text-1,
+.wrapper:has(#images-3:checked) .text-1 {
+  transform: translate(-100%);
+  transition: 1s;
+}
+
 .wrapper:has(#images-3:checked) .text-2 {
-  display: none;
+  transform: translate(-100%);
+  transition: 1s;
+}
+.wrapper:has(#images-3:checked) .text-3 {
+  transform:translateY(-200%);;
+  transition: 1s;
 }
 
 /* 4 text */
-.wrapper:has(#images-4:checked) .text-1,
-.wrapper:has(#images-4:checked) .text-2,
+.wrapper:has(#images-4:checked) .text-1 {
+  transform: translate(-100%);
+  transition: 1s;
+}
+
+.wrapper:has(#images-4:checked) .text-2 {
+  transform: translate(-100%);
+  transition: 1s;
+}
 .wrapper:has(#images-4:checked) .text-3 {
-  display: none;
+  transform: translate(-100%);
+  transition: 1s;
+}
+.wrapper:has(#images-4:checked) .text-4 {
+  transform:translateY(-300%);;
+  transition: 1s;
 }
 
 /* 5 text */
-.wrapper:has(#images-5:checked) .text-1,
-.wrapper:has(#images-5:checked) .text-2,
-.wrapper:has(#images-5:checked) .text-3,
-.wrapper:has(#images-5:checked) .text-4 {
-  display: none;
+.wrapper:has(#images-5:checked) .text-1 {
+  transform: translate(-100%);
+  transition: 1s;
 }
+
+.wrapper:has(#images-5:checked) .text-2 {
+  transform: translate(-100%);
+  transition: 1s;
+}
+.wrapper:has(#images-5:checked) .text-3 {
+  transform: translate(-100%);
+  transition: 1s;
+}
+.wrapper:has(#images-5:checked) .text-4 {
+  transform: translate(-100%);
+  transition: 1s;
+}
+.wrapper:has(#images-5:checked) .text-5 {
+  transform:translateY(-400%);;
+  transition: 1s;
+}
+
+
 
