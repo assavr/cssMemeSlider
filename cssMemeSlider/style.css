@@ -2,18 +2,29 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  color: black
+}
+
+
+
+path {
+  fill: red;
 }
 
 .wrapper {
   overflow: hidden;
   margin: 0 auto;
   padding: 1%;
-  width: 60vw;
-  height: 55vh;
-  background-color: #aaa;
+  width: 55vw;
+    height: 36vh;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
+  border: .2em solid red;
+  border-radius: 3em;
+  background-color: #ff00001f;
+
+
+
 }
 
 .wrapper__top {
@@ -48,19 +59,20 @@ input {
 
 
 .block__text {
-  height: 2em;
-
+  height: 4em;
   overflow: hidden;
 }
 
 .text {
   display: inline-block;
-  width: 3em;
-  margin-right: 51em;
+  width: 15em;
+  margin-right: 21em;
   line-height: 2em;
-  /* display: flex;
-  align-items: center;
-    justify-content: center; */
+  margin-left: 1em;
+  /* Typography */
+  font-size: 2em;
+  color: #4f4f4f;
+
 }
 
 
@@ -74,57 +86,11 @@ input {
   cursor: pointer;
   padding: 0.8em;
   opacity: 0.4;
-  /* background-color: gray; */
-  /* add transition */
 }
 
 .block-btn:hover {
   opacity: 1;
 }
-
-.block-btn:active .btn {
-  background-color: black;
-}
-
-#images-1:checked+.btn-1 {
-  background-color: black;
-}
-
-#images-2:checked+.btn-1 {
-  background-color: black;
-}
-
-.btn {
-  height: 1em;
-  width: 1em;
-  border-radius: 100%;
-  background-color: pink;
-}
-
-
-/* 
-#images-1:checked~.item-1 {
-  margin-left: 0%;
-  
-}
-
-
-#images-2:checked~.item-1 {
-  margin-left: -20%;
-  
-}
-
-#images-3:checked~.item-1 {
-  margin-left: -40%;
-}
-
-#images-4:checked~.item-1 {
-  margin-left: -60%;
-}
-
-#images-5:checked~.item-1 {
-  margin-left: -80%;
-} */
 
 
 
@@ -151,30 +117,27 @@ input {
 
 
 /* active state btn */
-.wrapper:has(#images-1:checked) .btn-1 {
-  background-color: red;
+
+.wrapper:has(#images-1:checked) [data-heart="one"] {
   opacity: 1;
 }
 
-.wrapper:has(#images-2:checked) .btn-2 {
-  background-color: red;
+.wrapper:has(#images-2:checked) [data-heart="two"] {
   opacity: 1;
 }
 
-.wrapper:has(#images-3:checked) .btn-3 {
-  background-color: red;
+.wrapper:has(#images-3:checked) [data-heart="three"] {
   opacity: 1;
 }
 
-.wrapper:has(#images-4:checked) .btn-4 {
-  background-color: red;
+.wrapper:has(#images-4:checked) [data-heart="four"] {
   opacity: 1;
 }
 
-.wrapper:has(#images-5:checked) .btn-5 {
-  background-color: red;
+.wrapper:has(#images-5:checked) [data-heart="five"] {
   opacity: 1;
 }
+
 
 
 /* move text */
@@ -182,20 +145,10 @@ input {
 /* 1 text */
 
 
-
-
 /* 2 text */
 .wrapper:has(#images-2:checked) .text-1 {
   display: none;
 }
-
-/* .wrapper:has(#images-2:checked) .text-2 {
-    opacity: 1;
-   }
-  .text-2 {
-    opacity: 0;
-    transition: 1s;
-  } */
 
 /* 3 text */
 .wrapper:has(#images-3:checked) .text-1,
@@ -218,18 +171,3 @@ input {
   display: none;
 }
 
-
-/* начала делать сердечки вместо кружков
- */
-svg {
-  fill: green
-}
-.wrapper:has(#images-1:checked) [data-heart = "one"] {
-  fill: green;
-  opacity: 1;
-}
-
-.wrapper:has(#images-1:checked) .btn-11 {
-  
-  opacity: 1;
-}
