@@ -63,7 +63,7 @@ input {
   line-height: 2em;
   margin-left: 1em;
   /* Typography */
-  font-size: 2em;
+  font-size: 2.5em;
   color: #4f4f4f;
 
 }
@@ -297,7 +297,7 @@ label:active .path {
 
 @media (max-width: 660px) {
   .wrapper {
-    height: 25vh;
+    height: 54vh;
   }
   .wrapper__bottom {
     flex-direction: column-reverse;
@@ -324,8 +324,11 @@ label:active .path {
  /* */
 @media (max-width: 400px) {
   .wrapper {
-    height: 25vh;
+    height: 47vh;
   }
+  .item {
+    height: 90%;
+}
   .block__label {
     gap: 0.3em;
   } 
@@ -341,12 +344,12 @@ label:active .path {
   .text {
     margin-left: 0;
     margin-right: 0;
-    font-size: 1.8em;
+    font-size: 1.5em;
   }
 
   svg {
-    width: 1em;
-    height: 1em;
+    width: 1.4em;
+    height: 1.4em;
   }
 }
 
