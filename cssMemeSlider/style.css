@@ -204,8 +204,8 @@ label:active .path-out {
   }
 
   svg {
-    width: 0.9em;
-    height: 0.9em;
+    width: 0.6em;
+    height: 0.6em;
   }
 
   #slide-2:checked ~ .block-bottom > .block-text .span-2,
