@@ -9,6 +9,10 @@ img {
 input {
   display: none;
 }
+svg .path-out {
+  fill: transparent;
+  transition: all 0.4s ease-in-out;
+}
 
 .wrapper {
   display: flex;
@@ -87,25 +91,47 @@ input {
 
 #slide-2:checked ~ .block-bottom > .block-text .span-2,
 #slide-2:checked ~ .block-bottom > .block-text .span-1 {
-  transform: translateY(calc(-4.3vw * 1));
+  transform: translateY(calc(-4.8vw * 1));
 }
 
 #slide-3:checked ~ .block-bottom > .block-text .span-3,
 #slide-3:checked ~ .block-bottom > .block-text .span-2,
 #slide-3:checked ~ .block-bottom > .block-text .span-1 {
-  transform: translateY(calc(-4.3vw * 2));
+  transform: translateY(calc(-4.8vw * 2));
 }
 
 #slide-4:checked ~ .block-bottom > .block-text .span-4,
 #slide-4:checked ~ .block-bottom > .block-text .span-3,
 #slide-4:checked ~ .block-bottom > .block-text .span-2,
 #slide-4:checked ~ .block-bottom > .block-text .span-1 {
-  transform: translateY(calc(-4.3vw * 3));
+  transform: translateY(calc(-4.8vw * 3));
 }
 #slide-5:checked ~ .block-bottom > .block-text .span-5,
 #slide-5:checked ~ .block-bottom > .block-text .span-4,
 #slide-5:checked ~ .block-bottom > .block-text .span-3,
 #slide-5:checked ~ .block-bottom > .block-text .span-2,
 #slide-5:checked ~ .block-bottom > .block-text .span-1 {
-  transform: translateY(calc(-4.3vw * 4));
+  transform: translateY(calc(-4.8vw * 4));
+}
+
+label {
+  padding: 0.5vw;
+  cursor: pointer;
+}
+
+label:hover .path-out {
+  fill: red;
+}
+
+label:active .path-out {
+  fill: yellow;
+}
+
+#slide-1:checked ~ .block-bottom > .block-controls label svg .path-1,
+#slide-2:checked ~ .block-bottom > .block-controls label svg .path-2,
+#slide-3:checked ~ .block-bottom > .block-controls label svg .path-3,
+#slide-4:checked ~ .block-bottom > .block-controls label svg .path-4,
+#slide-5:checked ~ .block-bottom > .block-controls label svg .path-5 {
+  fill: red;
+  cursor: default;
 }
