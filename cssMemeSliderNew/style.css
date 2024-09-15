@@ -1,0 +1,13 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100dvw;
+  height: 100dvh;
+}
+
+.content {
+  border: 2px solid black;
+  width: 30vw;
+  aspect-ratio: 1 / 1;
+}
