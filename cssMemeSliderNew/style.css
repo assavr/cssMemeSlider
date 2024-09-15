@@ -2,6 +2,17 @@
   box-sizing: border-box;
 }
 
+body {
+  background: radial-gradient(
+    circle,
+    rgba(255, 0, 69, 0.09007352941176472) 0%,
+    rgba(255, 226, 0, 0.224) 51%,
+    rgba(255, 0, 69, 0.2721463585434174) 100%
+  );
+  color: #606060;
+  font-weight: 300;
+}
+
 img {
   width: 24vw;
 }
@@ -30,6 +41,9 @@ svg .path-out {
   width: 40vw;
   aspect-ratio: 1 / 1;
   overflow: hidden;
+  border: 0.2em solid #ff0045;
+  border-radius: 3em;
+  background-color: #ff00001f;
 }
 
 .block-imgs {
@@ -124,7 +138,7 @@ label:hover .path-out {
 }
 
 label:active .path-out {
-  fill: yellow;
+  fill: #eb00ff45;
 }
 
 #slide-1:checked ~ .block-bottom > .block-controls label svg .path-1,
