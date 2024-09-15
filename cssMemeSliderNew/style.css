@@ -4,7 +4,6 @@
 
 img {
   width: 24vw;
-  transition: 0.3s;
 }
 
 input {
@@ -22,7 +21,6 @@ input {
 .content {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   padding: 2vw;
   border: 0.1em solid black;
   width: 40vw;
@@ -38,17 +36,6 @@ input {
   margin-bottom: 1em;
   transition: all 0.5s ease-in-out;
 }
-
-/* #slide-1:checked ~ .block-imgs .img-1 {
-  transform: translateX(0);
-} */
-
-/* #slide-2:checked ~ .block-imgs .img-2,
-#slide-3:checked ~ .block-imgs .img-3,
-#slide-4:checked ~ .block-imgs .img-4,
-#slide-5:checked ~ .block-imgs .img-5 {
-  transform: translateX(0);
-} */
 
 .img-1 {
   margin-left: 6vw;
@@ -70,6 +57,55 @@ input {
   transform: translateX(calc(-37vw * 4));
 }
 
-/* #slide-2:checked ~ .block-imgs .img- {
-  transform: translateX(calc(37vw * 1));
-} */
+.block-bottom {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.block-text {
+  overflow: hidden;
+  flex-basis: 22vw;
+  height: 4vw;
+  font-size: 1.5vw;
+  vertical-align: middle;
+  line-height: 1.6vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.block-text p {
+  transition: all 0.5s ease-in-out;
+}
+
+.block-controls {
+  display: flex;
+  justify-content: end;
+  flex: 1;
+  gap: 0.5vw;
+}
+
+#slide-2:checked ~ .block-bottom > .block-text .span-2,
+#slide-2:checked ~ .block-bottom > .block-text .span-1 {
+  transform: translateY(calc(-4.3vw * 1));
+}
+
+#slide-3:checked ~ .block-bottom > .block-text .span-3,
+#slide-3:checked ~ .block-bottom > .block-text .span-2,
+#slide-3:checked ~ .block-bottom > .block-text .span-1 {
+  transform: translateY(calc(-4.3vw * 2));
+}
+
+#slide-4:checked ~ .block-bottom > .block-text .span-4,
+#slide-4:checked ~ .block-bottom > .block-text .span-3,
+#slide-4:checked ~ .block-bottom > .block-text .span-2,
+#slide-4:checked ~ .block-bottom > .block-text .span-1 {
+  transform: translateY(calc(-4.3vw * 3));
+}
+#slide-5:checked ~ .block-bottom > .block-text .span-5,
+#slide-5:checked ~ .block-bottom > .block-text .span-4,
+#slide-5:checked ~ .block-bottom > .block-text .span-3,
+#slide-5:checked ~ .block-bottom > .block-text .span-2,
+#slide-5:checked ~ .block-bottom > .block-text .span-1 {
+  transform: translateY(calc(-4.3vw * 4));
+}
